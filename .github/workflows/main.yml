@@ -9,6 +9,8 @@ jobs:
         run: echo "Test Main"
       - name: Checkout
         uses: actions/checkout@v3
+      - name: mvn install
+        run: mvn install -DskipTests        
       - name: DockerAction
         uses: ./       
 
