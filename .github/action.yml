@@ -1,6 +1,0 @@
-name: 'communicatie-engine-backend'
-description: 'communicatie-engine-backend'
-
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
