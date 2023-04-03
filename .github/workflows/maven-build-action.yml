@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: 'mvn build'
     steps:
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
       - name: Java version
         run: java -version
       - name: Checkout
