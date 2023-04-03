@@ -7,3 +7,8 @@ jobs:
     steps:
       - name: Echo something
         run: echo "Test Main"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/action        
+
