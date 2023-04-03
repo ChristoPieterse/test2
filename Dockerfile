@@ -11,6 +11,8 @@ COPY --from=builder /build/. .
 RUN ls -l
 RUN chown -R javauser:javauser .
 USER javauser
+RUN ls -l
+RUN pwd
 
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
