@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+  communicatie-engine-backend_job:
+    runs-on: ubuntu-latest
+    name: Build communicatie-engine-backend
+    steps:
+      - name: Run an echo
+        run: echo " --------- Github Main ------- "
