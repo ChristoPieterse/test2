@@ -1,0 +1,9 @@
+name: 'mvn build'
+description: 'mvn install -DskipTests'
+
+runs:
+    runs-on: ubuntu-latest
+    name: Build communicatie-engine-backend
+    steps:
+      - name: Run an echo
+        run: mvn install -DskipTests
