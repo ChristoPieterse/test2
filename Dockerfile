@@ -14,4 +14,4 @@ USER javauser
 
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
-ENTRYPOINT ["/opt/app/mvn","spring-boot:run"]
+ENTRYPOINT ["mvn","spring-boot:run"]
