@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  communicatie-engine-backend_job:
+    runs-on: ubuntu-latest
+    name: 'mvn build'
+    steps:
+      - name: Echo 1
+        run: echo "Going to call mvn"
+      - name: mvn install
+        run: mvn install -DskipTests
+      - name: Echo 2
+        run: echo "Maven is done!"
