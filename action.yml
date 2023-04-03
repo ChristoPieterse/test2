@@ -1,9 +1,7 @@
-name: 'mvn build'
-description: 'mvn install -DskipTests'
+# action.yml
+name: 'Build Docker File'
+description: 'Build the docker file'
 
 runs:
-    runs-on: ubuntu-latest
-    name: Build communicatie-engine-backend
-    steps:
-      - name: Run an echo
-        run: mvn install -DskipTests
+  using: 'docker'
+  image: 'Dockerfile'
