@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: actions/maven-build-action
+        uses: maven-build-action
       - name: Echo something
         run: echo "Test Main"
