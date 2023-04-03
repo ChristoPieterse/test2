@@ -4,15 +4,15 @@ COPY . .
 RUN ls -l
 #RUN mvn clean package -DskipTests
  
-FROM eclipse-temurin:17.0.5_8-jre-alpine
-WORKDIR /opt/app
-RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
-COPY --from=builder /build/. .
-RUN ls -l
-RUN chown -R javauser:javauser .
-USER javauser
-RUN ls -l
-RUN pwd
+#FROM eclipse-temurin:17.0.5_8-jre-alpine
+#WORKDIR /opt/app
+#RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
+#COPY --from=builder /build/. .
+#RUN ls -l
+#RUN chown -R javauser:javauser .
+#USER javauser
+#RUN ls -l
+#RUN pwd
 
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
