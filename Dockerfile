@@ -7,10 +7,11 @@ RUN ls -l
 FROM eclipse-temurin:17.0.5_8-jre-alpine
 WORKDIR /opt/app
 RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
-COPY --from=builder . .
+COPY --from=builder /build/. .
 RUN ls -l
 RUN chown -R javauser:javauser .
 USER javauser
+RUN ls -l opt/app
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
 ENTRYPOINT ["/opt/app/mvn","spring-boot:run"]
