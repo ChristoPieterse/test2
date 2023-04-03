@@ -11,7 +11,7 @@ COPY --from=builder /build/. .
 RUN ls -l
 RUN chown -R javauser:javauser .
 USER javauser
-RUN ls -l opt/app
+
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
 ENTRYPOINT ["/opt/app/mvn","spring-boot:run"]
