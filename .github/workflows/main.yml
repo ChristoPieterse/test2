@@ -5,8 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     name: Build communicatie-engine-backend
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: actions
       - name: Echo something
         run: echo "Test Main"
