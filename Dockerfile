@@ -1,8 +1,13 @@
-# Container image that runs your code
-FROM alpine:3.10
+FROM maven:3.8.6-eclipse-temurin-17-alpine AS builder
+WORKDIR /build
+COPY . .
+RUN mvn clean package -DskipTests
+ 
+FROM eclipse-temurin:17.0.5_8-jre-alpine
+WORKDIR /opt/app
+RUN addgroup --system javauser && adduser -S -s /usr/sbin/nologin -G javauser javauser
+COPY --from=builder /build/target/communicatie-engine-backend-0.0.1-SNAPSHOT.jar communicatie-engine-backend.jar
+RUN chown -R javauser:javauser .
+USER javauser
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
-
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
