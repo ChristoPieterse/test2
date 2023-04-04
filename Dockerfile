@@ -2,8 +2,8 @@ FROM maven:3.8.6-eclipse-temurin-17-alpine AS builder
 EXPOSE 8080
 WORKDIR /build
 COPY . .
-RUN ls -l
 RUN chmod 777 entrypoint.sh
+RUN ls -l
 RUN pwd
 #RUN mvn clean package -DskipTests
  
@@ -20,4 +20,4 @@ RUN pwd
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
 #ENTRYPOINT ["mvn","spring-boot:run"]
-ENTRYPOINT ["/build/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
