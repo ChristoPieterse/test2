@@ -3,6 +3,7 @@ EXPOSE 8080
 WORKDIR /build
 COPY . .
 RUN ls -l
+RUN chmod 777 entrypoint.sh
 RUN pwd
 #RUN mvn clean package -DskipTests
  
