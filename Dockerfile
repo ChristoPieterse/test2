@@ -3,6 +3,7 @@ EXPOSE 8080
 WORKDIR /build
 COPY . .
 RUN ls -l
+RUN pwd
 #RUN mvn clean package -DskipTests
  
 #FROM eclipse-temurin:17.0.5_8-jre-alpine
@@ -18,4 +19,4 @@ RUN ls -l
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
 #ENTRYPOINT ["mvn","spring-boot:run"]
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/build/entrypoint.sh"]
