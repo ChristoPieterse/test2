@@ -17,4 +17,5 @@ RUN ls -l
 
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
-ENTRYPOINT ["mvn","spring-boot:run"]
+#ENTRYPOINT ["mvn","spring-boot:run"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
