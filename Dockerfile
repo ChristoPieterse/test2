@@ -20,5 +20,5 @@ RUN pwd
 
 #ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
 #ENTRYPOINT ["mvn","spring-boot:run"]
-#ENTRYPOINT ["/build/entrypoint.sh"]
-CMD ["/build/entrypoint.sh"]
+ENTRYPOINT ["/build"]
+CMD ["entrypoint.sh"]
