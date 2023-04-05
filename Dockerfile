@@ -5,7 +5,7 @@ WORKDIR /build
 #RUN chmod 777 entrypoint.sh
 RUN ls -l
 RUN pwd
-COPY /build/target/communicatie-engine-backend-0.0.1-SNAPSHOT-spring-boot.jar communicatie-engine-backend.jar
+COPY /target/communicatie-engine-backend-0.0.1-SNAPSHOT-spring-boot.jar communicatie-engine-backend.jar
 
 RUN ls -l
 RUN pwd
