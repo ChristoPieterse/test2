@@ -7,6 +7,12 @@ jobs:
     steps:
       - name: Echo something
         run: echo "Test Main"
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Java version
+        run: java -version        
       - name: Checkout
         uses: actions/checkout@v3 
       - name: mvn install
