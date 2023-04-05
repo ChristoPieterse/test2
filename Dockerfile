@@ -4,5 +4,5 @@ WORKDIR /build
 COPY . .
 RUN mvn install -DskipTests
 
-ENTRYPOINT ["mvn","spring-boot:run"]
+ENTRYPOINT ["mvn","spring-boot:run","&"]
 
