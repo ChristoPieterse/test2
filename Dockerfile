@@ -7,7 +7,8 @@ RUN ls -l
 RUN pwd
 
 
-RUN mvn install -DskipTests
+#RUN mvn install -DskipTests
 
 #ENTRYPOINT ["/build/entrypoint.sh"]
-CMD ["/build/entrypoint.sh"]
+#CMD ["/build/entrypoint.sh"]
+ENTRYPOINT ["java","-jar","communicatie-engine-backend.jar"]
