@@ -8,7 +8,9 @@ jobs:
       - name: Echo something
         run: echo "Test Main"
       - name: Checkout
-        uses: actions/checkout@v3   
+        uses: actions/checkout@v3 
+      - name: mvn install
+        run: mvn install -DskipTests 
       - name: DockerAction
         uses: ./
       - name: Publish to Docker Hub
