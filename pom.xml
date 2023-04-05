@@ -83,7 +83,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>libs/</classpathPrefix>
 							<mainClass>
-								com.baeldung.executable.ExecutableMavenJar
+								com.alliander.kv.Application
 							</mainClass>
 						</manifest>
 					</archive>
@@ -102,7 +102,7 @@
 							<archive>
 							<manifest>
 								<mainClass>
-									com.baeldung.executable.ExecutableMavenJar
+									com.alliander.kv.Application
 								</mainClass>
 							</manifest>
 							</archive>
@@ -126,7 +126,7 @@
 							<transformers>
 								<transformer implementation=
 								  "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.baeldung.executable.ExecutableMavenJar</mainClass>
+									<mainClass>com.alliander.kv.Application</mainClass>
 							</transformer>
 						</transformers>
 					</configuration>
@@ -139,8 +139,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>org.baeldung.executable.
-							  ExecutableMavenJar</mainClass>
+							<mainClass>com.alliander.kv.Application</mainClass>
 							<attachToBuild>true</attachToBuild>
 							<filename>
 							  ${project.build.finalName}.${project.packaging}
@@ -163,7 +162,7 @@
 						<configuration>
 							<classifier>spring-boot</classifier>
 							<mainClass>
-							  com.baeldung.executable.ExecutableMavenJar
+							  com.alliander.kv.Application
 							</mainClass>
 						</configuration>
 					</execution>
