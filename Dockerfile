@@ -9,5 +9,5 @@ RUN pwd
 
 RUN mvn install -DskipTests
 
-ENTRYPOINT ["/build/entrypoint.sh"]
-
+#ENTRYPOINT ["/build/entrypoint.sh"]
+CMD ["/build/entrypoint.sh"]
