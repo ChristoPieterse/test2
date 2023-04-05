@@ -3,6 +3,9 @@ EXPOSE 8080
 WORKDIR /build
 COPY . .
 RUN chmod 777 entrypoint.sh
+RUN ls -l
+RUN pwd
+
 
 #RUN mvn install -DskipTests
 
