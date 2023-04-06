@@ -10,7 +10,6 @@ COPY /target/communicatie-engine-backend-0.0.1-SNAPSHOT-spring-boot.jar communic
 RUN ls -l
 RUN pwd
 
-
 #RUN mvn install -DskipTests
 
 #ENTRYPOINT ["/build/entrypoint.sh"]
