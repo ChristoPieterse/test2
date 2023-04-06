@@ -14,6 +14,6 @@ RUN pwd
 #RUN mvn install -DskipTests
 
 #ENTRYPOINT ["/build/entrypoint.sh"]
-#CMD ["/build/entrypoint.sh"]
+CMD ["entrypoint.sh"]
 #ENTRYPOINT ["java","-jar","/build/communicatie-engine-backend.jar"]
-CMD ["java -jar communicatie-engine-backend.jar"]
+#CMD ["java -jar communicatie-engine-backend.jar"]
