@@ -1,2 +1,2 @@
 #mvn spring-boot:run &
-java -jar /build/communicatie-engine-backend.jar
+java -jar /build/communicatie-engine-backend.jar &
