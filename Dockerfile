@@ -3,7 +3,7 @@ EXPOSE 8080
 WORKDIR /build
 #COPY . .
 #RUN chmod 777 entrypoint.sh
-RUN ls -l
+RUN ls -l target
 RUN pwd
 #COPY /target/communicatie-engine-backend-0.0.1-SNAPSHOT-spring-boot.jar communicatie-engine-backend.jar
 COPY /target/communicatie-engine-backend-0.0.1-SNAPSHOT-jar-with-dependencies communicatie-engine-backend.jar
