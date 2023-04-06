@@ -15,4 +15,5 @@ RUN pwd
 
 #ENTRYPOINT ["/build/entrypoint.sh"]
 #CMD ["/build/entrypoint.sh"]
-ENTRYPOINT ["java","-jar","/build/communicatie-engine-backend.jar"]
+#ENTRYPOINT ["java","-jar","/build/communicatie-engine-backend.jar"]
+CMD ["java -jar /build/communicatie-engine-backend.jar"]
