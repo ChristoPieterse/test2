@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3 
       - name: mvn install
-        run: mvn install -DskipTests 
+        run: mvn clean package -DskipTests
       - name: DockerAction
         uses: ./
       - name: Publish to Docker Hub
